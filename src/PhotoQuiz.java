@@ -46,15 +46,15 @@ else {
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
 quizWindow.remove(c);
 		// 10. find another image and create it (might take more than one line of code)
-String image2 = "http://i0.kym-cdn.com/photos/images/newsfeed/000/096/044/trollface.jpg?1296494117";
+String image2 = "Drum.png";
 Component c2 = createImage(image2);
 		// 11. add the second image to the quiz window
 quizWindow.add(c2);
 		// 12. pack the quiz window
 quizWindow.pack();
 		// 13. ask another question
-String question2 = JOptionPane.showInputDialog("What meme is this?");
-if(question2.equalsIgnoreCase("trollface")) {
+String question2 = JOptionPane.showInputDialog("What is this?");
+if(question2.equalsIgnoreCase("a computer")) {
 	System.out.println("Correct!!");
 }
 else {
@@ -63,7 +63,9 @@ else {
 
 		// 14+ check answer, say if correct or incorrect, etc.
 
-	}
+}
+
+	
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);
