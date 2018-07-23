@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class JackInTheBox implements ActionListener {
+	int score = 0;
 public static void main(String[] args) {
 	JackInTheBox JITB = new JackInTheBox();
 	JITB.showButton();
@@ -25,7 +26,7 @@ public void showButton() {
 	windowsxp.setSize(100, 100);
 	button.addActionListener(this);
 	System.out.println("Button Pressed");
-	
+	score++;
 }
 @Override
 public void actionPerformed(ActionEvent e) {
@@ -33,9 +34,9 @@ public void actionPerformed(ActionEvent e) {
 	JOptionPane.showMessageDialog(null, "Woohoo!");
 	
 }
-private void showPicture(String JackInTheBox) {
+private void showPicture(String jackinbox) {
 	try {
-		JLabel label = createLabelImage(JackInTheBox);
+		JLabel label = createLabelImage("jackinbox.jpg");
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(label);
